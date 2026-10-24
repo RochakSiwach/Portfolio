@@ -1,0 +1,48 @@
+.experience {
+  border-radius: 10px;
+  background-color: rgb(29, 29, 29);
+
+  max-width: 350px;
+  max-height: 420px;
+
+  position: absolute;
+  top: 120px;
+  right: 10px;
+
+  padding: 10px;
+  margin: 10px;
+
+  overflow: scroll;
+}
+
+.experience-data {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: small;
+  line-height: 1.6;
+  transition: transform 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
+  box-shadow: 3px 3px 0 grey;
+}
+
+.experience-data:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 grey;
+}
+
+.experience-heading-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-date {
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 3px;
+}
+
+.experience-data .experienceHeading {
+  font-size: larger;
+}

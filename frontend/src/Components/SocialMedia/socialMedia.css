@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.links{
+  
+  margin: 10px;
+  padding: 10px;
+
+  border: 1px solid white;
+  border-radius: 10px;
+
+  background-color: rgb(31, 30, 30);
+
+  width: 350px;
+  height: 100px;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.mediaLinks svg{
+
+  border: 1px solid white;
+  border-radius: 10px ;
+
+  width: 55px;
+  height: 70px;
+
+  padding: 10px;
+  margin-left: 10px;
+
+  background-color: rgb(0, 0, 0);
+
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
+  box-shadow: 3px 3px 0 grey;
+} 
+
+
+.mediaLinks svg :hover{
+
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 grey;
+
+}

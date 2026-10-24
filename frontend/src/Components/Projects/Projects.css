@@ -1,0 +1,54 @@
+.projects {
+  background-color: red;
+  color: white;
+
+  position: absolute;
+  top: 10px;
+
+  left: 17.5%;
+
+  padding: 10px;
+  margin: 10px;
+
+  width: 55%;
+  height: 250px;
+
+  border-radius: 10px;
+  background-color: rgb(29, 29, 29);
+
+  box-shadow: 0 0 5px 0.5px grey;
+  
+  display: flex;
+}
+
+
+.project-heading{
+    
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.projects-data {
+  border: 1px solid red;
+  border-radius: 5px;
+
+  min-height: 60px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.project-link {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}

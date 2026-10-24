@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.github {
+  margin: 10px;
+  padding: 10px;
+
+  background-color: rgb(35, 171, 35);
+
+  border: 1px solid white;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 270px;
+  left: 10px;
+
+  width: 350px;
+  height: 265px;
+}
