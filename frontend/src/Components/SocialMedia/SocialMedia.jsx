@@ -5,7 +5,7 @@ import "./socialMedia.css";
 
 const SocialMedia = () => {
 
-  return (
+  return ( 
     <div rel="noopener noreferrer" className="social-links">
       <div className="links">
         <a href="https://github.com/RochakSiwach" target='_blank' rel="noopener noreferrer" className="mediaLinks">
@@ -27,6 +27,8 @@ const SocialMedia = () => {
         <a href="https://rochakportfolio.vercel.app" target='_blank' rel="noopener noreferrer" className="mediaLinks">
           <FaFileAlt  color="white"/>
         </a>
+
+        
 
       </div>
     </div>

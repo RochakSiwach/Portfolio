@@ -6,6 +6,7 @@ import Projects from './Components/Projects/Projects'
 import Profile from './Components/Profile/Profile'
 import Github from './Components/Github/Github'  
 import ProblemSolving from './Components/ProblemSolvingPlatform/ProblemSolvingPlatform'
+import Scene from './Components/Scene/Scene'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
 
       <div>
         <TechStack />
+        <Scene />
       </div>
     </div>
   )

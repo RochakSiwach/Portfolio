@@ -17,7 +17,7 @@ const Profile = () => {
             <h2>Rochak Siwach</h2>
             <p>@siwachshaab</p>
           </div>
-
+      
           <a
             href={Resume}
             download="Rochak_Siwach.pdf"
