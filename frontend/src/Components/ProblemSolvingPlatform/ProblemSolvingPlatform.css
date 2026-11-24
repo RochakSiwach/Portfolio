@@ -1,10 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+
 
 .problemSolving {
-  margin: 10px;
   padding: 10px;
 
   background-color: orange;
@@ -12,10 +8,14 @@
   border: 1px solid white;
   border-radius: 10px;
 
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  grid-area: problem;
 
-  width: 230px;
-  height: 250px;
+  min-width: 0;
+  min-height: 0;
+}
+
+@media (max-width: 1100px) {
+  .problemSolving {
+    min-height: 170px;
+  }
 }

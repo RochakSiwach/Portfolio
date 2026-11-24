@@ -1,20 +1,16 @@
+
 .experience {
+  padding: 10px;
+
   border-radius: 10px;
   background-color: rgb(29, 29, 29);
 
-  max-width: 350px;
-  max-height: 370px;
+  grid-area: experience;
 
-  position: absolute;
-  top: 120px; 
-  right: 10px;
+  min-width: 0;
+  min-height: 0;
 
-  padding: 10px;
-  margin: 10px;
-
-  margin-top: 30px;
-
-  overflow: scroll;
+  overflow: auto;
 }
 
 .experience-data {
@@ -37,14 +33,24 @@
 .experience-heading-date {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .experience-date {
-    border: 1px solid grey;
-    border-radius: 4px;
-    padding: 3px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 3px;
+
+  white-space: nowrap;
+  height: fit-content;
 }
 
 .experience-data .experienceHeading {
   font-size: larger;
+}
+
+@media (max-width: 1100px) {
+  .experience {
+    max-height: 420px;
+  }
 }

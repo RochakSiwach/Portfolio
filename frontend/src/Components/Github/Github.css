@@ -1,10 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
-.github {
-  margin: 10px;
+
+ .github {
   padding: 10px;
 
   background-color: rgb(35, 171, 35);
@@ -12,12 +8,14 @@
   border: 1px solid white;
   border-radius: 10px;
 
-  position: absolute;
-  top: 35%;
-  left: 10px;
+  grid-area: github;
 
-  width: 340px;
-  height: 220px;
-
+  min-width: 0;
+  min-height: 0;
 }
- 
+
+@media (max-width: 1100px) {
+  .github {
+    min-height: 170px;
+  }
+}

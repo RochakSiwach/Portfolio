@@ -2,6 +2,8 @@ import React from "react";
 import { FaGithub, FaTwitter, FaLinkedin, FaFileAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import "./socialMedia.css";
+import Resume from "../../assets/Rochak_Siwach.pdf";
+
 
 const SocialMedia = () => {
 
@@ -24,7 +26,14 @@ const SocialMedia = () => {
           <MdEmail  color="white"/>
         </a>
 
-        <a href="https://rochakportfolio.vercel.app" target='_blank' rel="noopener noreferrer" className="mediaLinks">
+        <a
+            href={Resume}
+            download="Rochak_Siwach.pdf"
+            className="mediaLinks"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+       
           <FaFileAlt  color="white"/>
         </a>
 

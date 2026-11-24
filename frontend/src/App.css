@@ -1,0 +1,38 @@
+.app {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr) 370px;
+  grid-template-rows: 270px minmax(0, 1fr) 270px;
+  grid-template-areas:
+    "problem projects right"
+    "github  profile  right"
+    "tech    tech     scene";
+  gap: 20px;
+  padding: 20px;
+
+  height: 100dvh;    
+  min-height: 720px;  
+}
+
+.cell {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+}
+.cell > * { flex: 1; min-width: 0; } 
+
+.area-problem  { grid-area: problem; }
+.area-projects { grid-area: projects; }
+.area-github   { grid-area: github; }
+.area-profile  { grid-area: profile; }
+.area-tech     { grid-area: tech; }
+.area-scene    { grid-area: scene; }
+
+.area-right {
+  grid-area: right;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 0;
+}
+.area-right > .social-links { flex: none; }
+.area-right > .experience   { flex: 1; min-height: 0; }

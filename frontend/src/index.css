@@ -1,18 +1,121 @@
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 html,
 body,
 #root {
-    width: 100%;
-    min-height: 100%;
+  width: 100%;
+  min-height: 100%;
 }
 
 body {
-    background-color: black;
-    color: white;
-    overflow: hidden;
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+
+
+#root > div {
+  display: grid;
+
+  grid-template-columns:
+    clamp(240px, 22vw, 340px)
+    minmax(0, 1fr)
+    clamp(280px, 26vw, 380px);
+
+  grid-template-rows:
+    auto
+    minmax(100px, 0.5fr)
+    minmax(220px, 1fr)
+    minmax(230px, 1fr);
+
+  grid-template-areas:
+    "problem projects social"
+    "problem projects experience"
+    "github  profile  experience"
+    "tech    tech     scene";
+
+  gap: 20px;
+  padding: 20px;
+
+  height: 100dvh;
+  min-height: 760px;
+}
+
+/* TechStack aur Scene wala wrapper div gayab, dono seedha grid mein aayenge */
+#root > div > div:has(> .tech) {
+  display: contents;
+}
+
+/* ProblemSolving aur Github ke bahar wale div ko jagah do, taaki andar ka card poori height le */
+#root > div > div:has(> .problemSolving) {
+  display: flex;
+
+  grid-area: problem;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+#root > div > div:has(> .github) {
+  display: flex;
+
+  grid-area: github;
+
+  min-width: 0;
+  min-height: 0;
+}
+
+#root > div > div > .problemSolving,
+#root > div > div > .github {
+  flex: 1;
+  min-width: 0;
+}
+
+
+@media (max-width: 1100px) {
+  #root > div {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-rows: none;
+
+    grid-template-areas:
+      "projects   projects"
+      "problem    github"
+      "social     social"
+      "profile    profile"
+      "experience experience"
+      "tech       tech"
+      "scene      scene";
+
+    height: auto;
+    min-height: 100dvh;
+  }
+}
+
+
+@media (max-width: 640px) {
+  #root > div {
+    grid-template-columns: minmax(0, 1fr);
+
+    grid-template-areas:
+      "problem"
+      "projects"
+      "social"
+      "github"
+      "profile"
+      "experience"
+      "tech"
+      "scene";
+
+    gap: 14px;
+    padding: 12px;
+  }
 }
