@@ -18,9 +18,13 @@ connectingMongoDb();
 
 // Routes
 const githubRoute = require("./routes/githubRoutes")
+const leetCodeRoute = require("./routes/leetCodeRoute")
 
 
 server.use("/api/github", githubRoute);
+server.use("/api/leetcode", leetCodeRoute)
+
+
 
 // Global error handler
 server.use((error, req, res, next) => {
