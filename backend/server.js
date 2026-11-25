@@ -1,27 +1,35 @@
+
+ 
 require("dotenv").config();
-const express = require('express')
-const server = express()
-const port = process.env.PORT || 3001
-const cors = require('cors')
 
-server.use(express.json())
-server.use(cors())
+const express = require("express");
+const cors = require("cors");
 
-const connectingMongoDb = require('./config/db')
-connectingMongoDb()
+const server = express();
+const port = process.env.PORT || 3001;
+
+// Middlewares
+server.use(express.json());
+server.use(cors());
+
+// Database connection
+const connectingMongoDb = require("./config/db");
+connectingMongoDb();
+
+// Routes
+const githubRoute = require("./routes/githubRoute");
 
 
-const mainRoute = require("./routes/mainRoute")
+server.use("/api/github", githubRoute);
 
-server.use(mainRoute)
-
+// Global error handler
 server.use((error, req, res, next) => {
-  console.error(error);
+    console.error(error);
 
-  res.status(500).json({
-    success: false,
-    message: "Internal server error",
-  });
+    res.status(500).json({
+        success: false,
+        message: "Internal server error"
+    });
 });
 
 
