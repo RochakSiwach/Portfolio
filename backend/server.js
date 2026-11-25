@@ -17,7 +17,7 @@ const connectingMongoDb = require("./config/db");
 connectingMongoDb();
 
 // Routes
-const githubRoute = require("./routes/githubRoute");
+const githubRoute = require("./routes/githubRoutes")
 
 
 server.use("/api/github", githubRoute);
